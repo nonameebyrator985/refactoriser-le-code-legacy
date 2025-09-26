@@ -15,4 +15,9 @@ program
   .option('-v, --verbose', 'Enable verbose output for detailed information')
   .action(options => refactor(options.path, options.verbose));
 
+program
+  .command('help')
+  .description('Display help information about the CLI commands')
+  .action(() => program.help());
+
 program.parse(process.argv);
