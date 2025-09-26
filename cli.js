@@ -5,14 +5,14 @@ const { analyze, refactor } = require('./src/tools');
 
 program
   .command('analyze')
-  .option('-p, --path <path>', 'chemin du projet à analyser')
+  .option('-p, --path <path>', 'path to the project to analyze')
   .action((options) => {
     analyze(options.path);
   });
 
 program
   .command('refactor')
-  .option('-p, --path <path>', 'chemin du projet à refactoriser')
+  .option('-p, --path <path>', 'path to the project to refactor')
   .action((options) => {
     refactor(options.path);
   });
